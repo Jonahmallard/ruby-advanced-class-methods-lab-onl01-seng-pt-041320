@@ -9,9 +9,23 @@ class Song
   def save
     self.class.all << self
   end
+  
+  def self.create
+    Song.new
+    @@all << Song.all
+  end
 
 end
 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
   def new_from_filename(name)
     song = self.new 
     song.name = (name.split(" - ")[1].chomp(".mp3"))
